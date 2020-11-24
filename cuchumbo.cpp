@@ -21,12 +21,10 @@ map<string, string> secret_santa(vector<string> participants_p){
         int random_num = rand()%max;    
 
         if(random_num == i){
-            // cout << "Random " << random_num << " i " << i << endl;
             continue;
         }
 
         if(givees[random_num] == "X"){
-            // cout << "Vector has "<<givees[random_num] << endl;
             continue;
         }
         
@@ -46,7 +44,27 @@ map<string, string> secret_santa(vector<string> participants_p){
 
 }
 
+void welcome_message(){
+
+    cout << endl;
+    cout << endl;
+    cout << "  .-\"\"-.\t\t** ** ** ** ** ** ** ** ** **\n";
+    cout << " /,..___\\\t\t*       MERRY CHRISTMAS     *\n";
+    cout << "() {_____}\t\t** ** ** ** ** ** ** ** ** **\n";
+    cout << "  (/-@-@-\\)\n";
+    cout << "  {`-=^=-'}\n";
+    cout << "  {  `-'  } Enter the amount of participants and their names \n";
+    cout << "   {     }  into the program for it to randomize the exchange\n";
+    cout << "    `---'\n"; 
+    cout << endl;
+}
+
+
+
 int main(){
+
+
+    welcome_message();
 
     vector<string> participants; 
     string name; 
