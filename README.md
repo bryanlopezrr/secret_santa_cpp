@@ -48,6 +48,6 @@ Here's a walkthrough of implemented user stories:
 
 ## Screenshots of the emails
 
-<img src = "./email_sc1.png" title="screenshot" width="200" height="350"/>
-<img src = "./email_sc2.png" title="screenshot" width="200" height="350"/>
+<img src = "./email_sc1.png" title="screenshot" width="600" height="350"/>
+<img src = "./email_sc2.png" title="screenshot" width="600" height="350"/>
 
