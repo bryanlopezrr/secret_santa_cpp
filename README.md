@@ -42,5 +42,12 @@ The following **required** functionality is completed:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-<img src='http://g.recordit.co/sxhqXk1Ppr.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='http://g.recordit.co/R0Uia1UCLl.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/O2mmVB6hDF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://g.recordit.co/GRCtCa7WtK.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
+## Screenshots of the emails
+
+<img src = "./email_sc1.png" title="screenshot" width="200" height="350"/>
+<img src = "./email_sc2.png" title="screenshot" width="200" height="350"/>
+
