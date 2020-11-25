@@ -3,6 +3,7 @@
 #include <vector>
 #include <map>
 #include <fstream>
+#include "termcolor.hpp"
 
 using namespace std; 
 
@@ -42,21 +43,20 @@ void welcome_message(){
 
     cout << endl;
     cout << endl;
-    cout << "  .-\"\"-.\t\t** ** ** ** ** ** ** ** ** **\n";
-    cout << " /,..___\\\t\t*        FELIZ NAVIDAD      *\n";
-    cout << "() {_____}\t\t** ** ** ** ** ** ** ** ** **\n";
+    cout << termcolor::red << "  .-\"\"-.\t\t" << termcolor::reset << termcolor::green<< "**"<<termcolor::reset<< " ** ** "<<termcolor::red<< "**"<<termcolor::reset<<" ** ** " << termcolor::green << "** " << termcolor::reset<< "** ** " << termcolor::red << "**\n" ;
+    cout << termcolor::red <<" /,..___\\\t\t" << termcolor::reset <<"*        FELIZ NAVIDAD      *\n";
+    cout << "() {_____}\t\t"<< termcolor::reset << termcolor::red<< "**"<<termcolor::reset<< " ** ** "<<termcolor::green<< "**"<<termcolor::reset<<" ** ** " << termcolor::red << "** " << termcolor::reset<< "** ** " << termcolor::green << "**\n" << termcolor::reset ;
     cout << "  (/-@-@-\\)\n";
     cout << "  {`-=^=-'}\n";
-    cout << "  {  `-'  } Empiecen poniendo cuantas personas van a partipar \n";
-    cout << "   {     }  junto con sus nombres y los emails de cada persona.\n";
-    cout << "    `---'   El programa luego hace la seleccion para todos.\n"; 
+    cout << "  {  `-'  } "<<termcolor::yellow<<"Empiecen poniendo cuantas personas van a partipar \n" << termcolor::reset;
+    cout << "   {     }  "<<termcolor::yellow<<"junto con sus nombres y los emails de cada persona.\n" << termcolor::reset;
+    cout << "    `---'   "<<termcolor::yellow<<"El programa luego hace la seleccion para todos.\n" << termcolor::reset; 
     cout << endl;
 }
 
 
 
 int main(int argc, char* argv[]){
-
 
     welcome_message();
 
@@ -68,11 +68,16 @@ int main(int argc, char* argv[]){
     cout << "Cuantas personas van a participar? \n";
     cin >> number_participants;
     cin.ignore(1000, '\n'); 
-    cout << endl;
+
+    if(number_participants == 1){
+        cout <<termcolor::on_red<< "No se puede hacer un intercambio entre una sola persona" <<termcolor::reset<< endl;
+        return 1; 
+    }
+
 
     while( number_participants ){
 
-        cout << "Cual es su nombre?\n";
+        cout << "\nCual es su nombre?\n";
         getline(cin, name); 
         // cin.ignore(1000, '\n');
 
@@ -101,10 +106,11 @@ int main(int argc, char* argv[]){
         // cout << final_assignment.first << " --> " << final_assignment.second << endl;
     }
 
-    cout << "TABLA DE REFERENCIA: \n";
-    cout << "NOMBRE\t\t\tEMAIL" << endl;
+    cout << termcolor::on_blue<<"TABLA DE REFERENCIA:\t\t\t\t" <<termcolor::reset<< endl;;
+    cout << termcolor::on_blue<< "NOMBRE\t\t\tEMAIL\t\t\t" << termcolor::reset << endl;
+
     for(int i = 0; i < participants_names.size(); i++){
-        cout << participants_names[i] << "\t---->\t" << participants[i] << endl;
+        cout <<termcolor::on_blue<< participants_names[i] << "\t---->\t" << participants[i] << "\t"<<termcolor::reset<< endl;
     }
     cout << endl;
 
@@ -116,11 +122,11 @@ int main(int argc, char* argv[]){
 
     if(result == 0){
         cout << endl;
-        cout << "Los correos electronicos fueron enviados exitosamente!\n\n";
+        cout <<termcolor::green<< "Los correos electronicos fueron enviados exitosamente!\n\n" <<termcolor::reset;
     }
     else{
         cout << endl;
-        cout << "Hubo algun error con el servicio de correo electronico\n\n";
+        cout <<termcolor::red<< "Hubo algun error con el servicio de correo electronico\n\n"<<termcolor::reset;
     }
 
     return 0; 

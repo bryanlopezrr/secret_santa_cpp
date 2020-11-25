@@ -53,10 +53,10 @@ for key, value in d.items():
 # print (s)
 
 #Delete the text file so that I dont look at the assignments 
-# if os.path.exists("assignments.txt"):
-#     os.remove("assignments.txt")
-# else:
-#     print("The file does not exist")
+if os.path.exists("assignments.txt"):
+    os.remove("assignments.txt")
+else:
+    print("El documento no existe")
 
 
 
