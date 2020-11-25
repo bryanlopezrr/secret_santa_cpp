@@ -37,7 +37,7 @@ The following **required** functionality is completed:
 ## Instructions to run the program
 - Navigate to file location
 - Compile the program using : $ g++ -std=c++17 'nameOfFile.cpp'  -o './nameOfEXE'
-- Run the program by executing ./nameOfEXE **email credential** **email password credential** the latter get passed as arguments to the script to log in and perform the operations
+- Run the program by executing ./nameOfEXE **[email credential]** **[password credential]** the latter get passed as arguments to the script to log in and perform the operations
 
 ## Video Walkthrough
 
